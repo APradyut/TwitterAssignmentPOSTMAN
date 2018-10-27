@@ -1,0 +1,14 @@
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\bin\Debug\netcoreapp2.1\TwitterAssignment.deps.json
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\bin\Debug\netcoreapp2.1\TwitterAssignment.runtimeconfig.json
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\bin\Debug\netcoreapp2.1\TwitterAssignment.runtimeconfig.dev.json
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\bin\Debug\netcoreapp2.1\TwitterAssignment.dll
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.csprojAssemblyReference.cache
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.csproj.CoreCompileInputs.cache
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.RazorAssemblyInfo.cache
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.RazorAssemblyInfo.cs
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.AssemblyInfoInputs.cache
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.AssemblyInfo.cs
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.RazorTargetAssemblyInfo.cache
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\bin\Debug\netcoreapp2.1\TwitterAssignment.pdb
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.dll
+C:\Users\Adarsh\source\repos\TwitterAssignment\TwitterAssignment\obj\Debug\netcoreapp2.1\TwitterAssignment.pdb
