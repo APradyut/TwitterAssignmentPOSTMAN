@@ -39,6 +39,7 @@ namespace TwitterAssignment.Services
 				///Creating user entity from input data
 				Users NewUser = new Users()
 				{
+					Id = new Random().Next(0, 9999999),
 					CreatedOn = DateTime.Now,
 					Email = data.Email,
 					Name = data.Name,
@@ -51,18 +52,16 @@ namespace TwitterAssignment.Services
 				//Adding user to database
 				int Result = userFunctions.AddUser(NewUser);
 
-				if (Result == 0)
-					return 0;
-				else if (Result == 1)
+				if (Result == 2)
 				{
 					//Handling the Exception
 					ExceptionHandler.Handle(userFunctions.LastException);
-					return 1;
 				}
-				else return Result;
+				return Result;
 			}
 			catch (Exception e)
 			{
+				ExceptionHandler.Handle(e);
 				throw;
 			}
 		}
@@ -75,11 +74,13 @@ namespace TwitterAssignment.Services
 		/// <returns>
 		/// Returns the login response model which needs to be sent as the response
 		/// </returns>
-		internal static LoginResponseModel Login(LoginRequestModel data, DBContext Db)
+		internal static LoginResponseModel Login(LoginRequestModel data, DBContext Db, IConfiguration Configuration)
 		{
 			IUserFunctions userFunctions = new UserFunctions(Db);
-			//Get the security key from somewhere safe
-			string SecurityKey = "This is a very long security key, which should not be stored or initialized here";
+			//Getting security key
+			//Please keep the security key somewhere safe like a registry
+			
+			string SecurityKey = Configuration["JWT:SecurityKey"];
 
 			//Create the Symmetric key from the security key
 			var SymmetricKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(SecurityKey));
@@ -88,28 +89,31 @@ namespace TwitterAssignment.Services
 			var SigningCredentials = new SigningCredentials(SymmetricKey, SecurityAlgorithms.HmacSha256Signature);
 
 			//Claims added according to the user
-			bool isValid = userFunctions.isVerifiedUser(data.Username, Crypto.GetHashStringsFromStrings(data.Password));
-			if (isValid)
+			int ReturnResult = userFunctions.isVerifiedUser(data.Username, Crypto.GetHashStringsFromStrings(data.Password));
+			if (ReturnResult == 0)
 			{
 				var Claims = new List<Claim>();
 				Claims.Add(new Claim(ClaimTypes.NameIdentifier, data.Username));
 
-				int ExpiryDays = 1;
+				int ExpiryDays = Convert.ToInt32(Configuration["JWT:Validity"]);
 				//Create token
 				var Token = new JwtSecurityToken(
-					issuer: "CentralController",
-					audience: "APP",
-					expires: DateTime.Now.AddDays(1),
+					issuer: Configuration["JWT:ValidIssuer"],
+					audience: Configuration["JWT:ValidAudience"],
+					expires: DateTime.Now.AddDays(ExpiryDays),
 					signingCredentials: SigningCredentials,
 					claims : Claims
 					);
 				string token = new JwtSecurityTokenHandler().WriteToken(Token);
-				token = Crypto.EncodeTo64(token);
-				return new LoginResponseModel(token, DateTime.Now.AddDays(ExpiryDays), "Ok");
+				return new LoginResponseModel(token, DateTime.Now.AddDays(ExpiryDays), "Ok", 0);
+			}
+			else if(ReturnResult == 1)
+			{
+				return new LoginResponseModel(null, default(DateTime), "Username or Password is invalid", 1);
 			}
 			else
 			{
-				return new LoginResponseModel(null, default(DateTime), "Username or Password is invalid");
+				return new LoginResponseModel(null, default(DateTime), "Error connecting to DB. Contact administrator", 2);
 			}
 		}
 	}

@@ -32,9 +32,8 @@ namespace TwitterAssignment
 		{
 			//Setting up JWT Token authentication
 			//Please put this key in some place safe like the registry.
-			string securityKey = "This is a very long security key, which should not be stored or initialized here";
-
-			var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
+			string SecurityKey = Configuration["JWT:SecurityKey"];
+			var SymmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(SecurityKey));
 			services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 				.AddJwtBearer(options =>
 				{
@@ -44,17 +43,17 @@ namespace TwitterAssignment
 						ValidateAudience = true,
 						ValidateIssuerSigningKey = true,
 
-						ValidIssuer = "CentralController",
-						ValidAudience = "Users",
-						IssuerSigningKey = symmetricSecurityKey
+						ValidIssuer = Configuration["JWT:ValidIssuer"], 
+						ValidAudience = Configuration["JWT:ValidAudience"], 
+						IssuerSigningKey = SymmetricSecurityKey
 					};
 				});
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
 			//Setting up DI for database connection
-			var connection = Configuration.GetConnectionString("DefaultConnection").ToString();
-			services.AddDbContext<DBContext>(options => options.UseSqlServer(connection));	//Using an SQL Server
+			var connection = Configuration.GetConnectionString("mysqlConnection").ToString();
+			services.AddDbContext<DBContext>(options => options.UseMySql(connection));	//Using an SQL Server
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

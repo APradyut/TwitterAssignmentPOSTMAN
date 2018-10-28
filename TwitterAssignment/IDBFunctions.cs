@@ -9,7 +9,7 @@ namespace TwitterAssignment
 	public interface IUserFunctions
 	{
 		Exception LastException { get; set; }
-		bool isVerifiedUser(string Username, string Password);
+		int isVerifiedUser(string Username, string Password);
 		int AddUser(Users user);
 	}
 }
