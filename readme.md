@@ -1,11 +1,11 @@
-#Twitter Assignment
+# Twitter Assignment
 
 Submitted By: 
 
 Adarsh Pradyut
 adarsh.pradyut@gmail.com
 +91 9962256589
-##Architectural Design
+## Architectural Design
 
 The project is developed with a scalable and easily understandable architecture.The project is divided into 6 different parts:
  1. Controllers :
