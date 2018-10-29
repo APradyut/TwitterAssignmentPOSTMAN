@@ -92,14 +92,14 @@ path-to-application:
 2. On prompt - enter password
 
 * **Installing and running the Project**
-* 	1. Goto https://github.com/APradyut/TwitterAssignmentPOSTMANPublished
+	1. Goto https://github.com/APradyut/TwitterAssignmentPOSTMANPublished
 	2. Download the repository and extract into a directory
 	**or**
-* 	1. Open git bash and navigate to desired directory
+ 	1. Open git bash and navigate to desired directory
 	2. Clone the repository
 	```git clone https://github.com/APradyut/TwitterAssignmentPOSTMANPublished.git```
 	**or**
-*	1. Extract the TwitterAssignmentPublished.zip file
+	1. Extract the TwitterAssignmentPublished.zip file
 
 ## Running
 
