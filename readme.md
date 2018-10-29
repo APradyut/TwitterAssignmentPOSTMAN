@@ -22,11 +22,9 @@ The project is developed with a scalable and easily understandable architecture.
  	This namespace contains all the models that are used specifically by the endpoints
 
 	3.1. Request Model :
-
 		Contains all the request models (classes) which contain the parameters required to call the end points
 
 	3.2. Response Model :
-
 		Contains all the response models (classes) which contains all the parameters that will be present in the response from the end point
 
  4. Entities:
