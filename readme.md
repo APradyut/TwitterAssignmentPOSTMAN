@@ -119,4 +119,4 @@ path-to-application:
 
 ## Authors
 
-* **Adarsh Pradyut** | mailto://adarsh.pradyut@gmail.com
+* **Adarsh Pradyut** | adarsh.pradyut@gmail.com
