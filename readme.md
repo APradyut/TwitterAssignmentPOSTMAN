@@ -91,31 +91,32 @@ path-to-application:
 ```\connect root@localhost:3306```
 2. On prompt - enter password
 
-* **Installing and running the Project**
-	1. Goto https://github.com/APradyut/TwitterAssignmentPOSTMANPublished
-	2. Download the repository and extract into a directory
-	**or**
- 	1. Open git bash and navigate to desired directory
-	2. Clone the repository
-	```git clone https://github.com/APradyut/TwitterAssignmentPOSTMANPublished.git```
-	**or**
-	1. Extract the TwitterAssignmentPublished.zip file
+
 
 ## Running
 
-1. Open appsettings.production.json file
-2. Add the password in the mysqlconnection connectionstring
+1. Goto https://github.com/APradyut/TwitterAssignmentPOSTMANPublished
+2. Download the repository and extract into a directory
+
+	**or**
+	
+1. Open git bash and navigate to desired directory
+2. Clone the repository
+```git clone https://github.com/APradyut/TwitterAssignmentPOSTMANPublished.git```
+
+3. Open appsettings.production.json file
+4. Add the password in the mysqlconnection connectionstring
 ```server=localhost;port=3306;database=db;uid=root;password=<add-password-here>; ```
-3. Save the file and exit
-4. Open command prompt at the location (Short-cut: Press Shift + Right Click > Select Open powershell here/Open Command prompt here )
-5. Run the project
+5. Save the file and exit
+6. Open command prompt at the location (Short-cut: Press Shift + Right Click > Select Open powershell here/Open Command prompt here )
+7. Run the project
 ```dotnet .\TwitterAssignment.dll```
-6. Import the postman collection from the collections folder into postman for testing APIs
+8. Import the postman collection from the collections folder into postman for testing APIs
 
 ## Download Links
 
 * [ASP .NET Core 2.1](https://www.microsoft.com/net/download) - The web framework used
-* [XAMPP](https://www.apachefriends.org/download.html) - Used as a server for mysql only
+* [MySQL](https://dev.mysql.com/downloads/file/?id=480824) - Used as a server for mysql only
 
 ## Authors
 
