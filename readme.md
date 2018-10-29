@@ -100,6 +100,7 @@ path-to-application:
 	**or**
 
 1. Open git bash and navigate to desired directory & Clone the repository
+
 ```git clone https://github.com/APradyut/TwitterAssignmentPOSTMANPublished.git```
 
 3. Open appsettings.production.json file
@@ -118,8 +119,4 @@ path-to-application:
 
 ## Authors
 
-* **Adarsh Pradyut**
-
-adarsh.pradyut@gmail.com
-
-+91 9962256589
+* **Adarsh Pradyut** | mailto://adarsh.pradyut@gmail.com
