@@ -69,8 +69,8 @@ path-to-application:
 
 ```
 
-* **Downloading and installing mysql server and client**
-1. Download mysql from https://dev.mysql.com/downloads/file/?id=480824
+* **Downloading and installing MySQL server and client**
+1. Download MySQL from https://dev.mysql.com/downloads/file/?id=480824
 2. After downloading, run the installer
 3. Agree to the policies
 4. Select the custom button on the next page
