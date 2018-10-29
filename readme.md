@@ -48,7 +48,7 @@ The project is developed with a scalable and easily understandable architecture.
 ### Installing
 
 * **Installing .Net core 2.1**
-1. Download .net core 2.1 sdk
+1. Download .net core 2.1 sdk from https://www.microsoft.com/net/download
 2. Run the installer
 3. Click on install in the bottom right corner
 4. Open CMD and type dotnet. You should get something like this.
