@@ -50,7 +50,7 @@ The project is developed with a scalable and easily understandable architecture.
 ### Installing
 
 * **Installing .Net core 2.1**
-1. download .net core 2.1 sdk
+1. Download .net core 2.1 sdk
 2. Run the installer
 3. Click on install in the bottom right corner
 4. Open CMD and type dotnet. You should get something like this.
@@ -72,9 +72,9 @@ path-to-application:
 ```
 
 * **Downloading and installing mysql server and client**
-1. download mysql from https://dev.mysql.com/downloads/file/?id=480824
-2. after downloading, run the installer
-3. agree to the policies
+1. Download mysql from https://dev.mysql.com/downloads/file/?id=480824
+2. After downloading, run the installer
+3. Agree to the policies
 4. Select the custom button on the next page
 5. Add MySQL Servers > MySQL Server > MySQL Server (Version) > MySQL Server (Version) - (Architecture)
 6. Add Applications > MySQL Shell > MySQL Shell (Version) > MySQL Shell (Version) - (Architecture)
